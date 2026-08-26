@@ -996,3 +996,275 @@ body {
     max-width: 100%;
   }
 }
+
+/* ========================================
+   COSMIC HOME — VISUAL UPGRADE
+======================================== */
+
+body {
+  background:
+    radial-gradient(
+      ellipse at 12% 18%,
+      rgba(118, 52, 190, 0.18),
+      transparent 32%
+    ),
+    radial-gradient(
+      ellipse at 53% 24%,
+      rgba(44, 105, 190, 0.13),
+      transparent 34%
+    ),
+    radial-gradient(
+      ellipse at 89% 34%,
+      rgba(65, 142, 70, 0.16),
+      transparent 35%
+    ),
+    #080b0e;
+}
+
+
+/* subtle stars */
+
+.home-page::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(
+      circle at 10% 18%,
+      rgba(181, 142, 255, 0.75) 0 1px,
+      transparent 1.5px
+    ),
+    radial-gradient(
+      circle at 27% 36%,
+      rgba(110, 182, 255, 0.55) 0 1px,
+      transparent 1.4px
+    ),
+    radial-gradient(
+      circle at 52% 12%,
+      rgba(255, 255, 255, 0.35) 0 1px,
+      transparent 1.3px
+    ),
+    radial-gradient(
+      circle at 71% 25%,
+      rgba(111, 192, 255, 0.45) 0 1px,
+      transparent 1.3px
+    ),
+    radial-gradient(
+      circle at 88% 42%,
+      rgba(138, 214, 96, 0.55) 0 1px,
+      transparent 1.5px
+    ),
+    radial-gradient(
+      circle at 17% 76%,
+      rgba(151, 104, 235, 0.4) 0 1px,
+      transparent 1.4px
+    ),
+    radial-gradient(
+      circle at 80% 83%,
+      rgba(124, 200, 101, 0.38) 0 1px,
+      transparent 1.4px
+    );
+
+  opacity: 0.7;
+  z-index: 0;
+}
+
+
+/* stronger but soft atmosphere */
+
+.home-page::before {
+  width: 100%;
+  height: 100%;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      ellipse at 15% 28%,
+      rgba(119, 54, 204, 0.15),
+      transparent 30%
+    ),
+    radial-gradient(
+      ellipse at 55% 25%,
+      rgba(40, 107, 193, 0.11),
+      transparent 32%
+    ),
+    radial-gradient(
+      ellipse at 89% 34%,
+      rgba(67, 159, 69, 0.14),
+      transparent 31%
+    ),
+    radial-gradient(
+      ellipse at 50% 110%,
+      rgba(39, 91, 113, 0.08),
+      transparent 38%
+    );
+
+  filter: none;
+  border-radius: 0;
+}
+
+
+/* hero symbol */
+
+.home-symbol {
+  width: min(46vw, 650px);
+  height: min(46vw, 650px);
+
+  opacity: 1;
+
+  filter:
+    drop-shadow(0 0 34px rgba(89, 126, 230, 0.12))
+    drop-shadow(0 0 65px rgba(77, 172, 91, 0.06));
+}
+
+.identity-symbol {
+  width: 100%;
+  height: 100%;
+
+  overflow: visible;
+
+  opacity: 0.88;
+}
+
+
+/* brighter identity colors */
+
+.mind-word {
+  color: #b283ff;
+  text-shadow: 0 0 18px rgba(178, 131, 255, 0.18);
+}
+
+.code-word {
+  color: #69baff;
+  text-shadow: 0 0 18px rgba(105, 186, 255, 0.15);
+}
+
+.nature-word {
+  color: #88d667;
+  text-shadow: 0 0 18px rgba(136, 214, 103, 0.14);
+}
+
+
+/* introductory gradient line */
+
+.intro::before {
+  content: "";
+  display: block;
+
+  width: 82px;
+  height: 1px;
+
+  margin-bottom: 26px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #b283ff,
+      #69baff,
+      #88d667
+    );
+}
+
+
+/* thought accent */
+
+.thought > span:first-child {
+  color: #a987dd;
+}
+
+.thought-arrow {
+  color: #79b9ed;
+}
+
+.thought:hover .thought-arrow {
+  color: #8ed36d;
+}
+
+
+/* section accent marks */
+
+.section-label::after {
+  content: "";
+
+  display: block;
+
+  width: 34px;
+  height: 1px;
+
+  margin-top: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ab7aff,
+      #67b5ff,
+      #88d667
+    );
+}
+
+
+/* lower-page atmosphere */
+
+.home-footer::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -150px;
+
+  width: 90vw;
+  height: 300px;
+
+  transform: translateX(-50%);
+
+  background:
+    radial-gradient(
+      ellipse at 20% 100%,
+      rgba(104, 63, 180, 0.14),
+      transparent 35%
+    ),
+    radial-gradient(
+      ellipse at 80% 100%,
+      rgba(78, 150, 70, 0.13),
+      transparent 35%
+    );
+
+  pointer-events: none;
+}
+
+
+/* mobile */
+
+@media (max-width: 899px) {
+
+  body {
+    background:
+      radial-gradient(
+        ellipse at 10% 10%,
+        rgba(111, 54, 185, 0.14),
+        transparent 30%
+      ),
+      radial-gradient(
+        ellipse at 95% 35%,
+        rgba(63, 137, 77, 0.12),
+        transparent 32%
+      ),
+      #080b0e;
+  }
+
+  .home-symbol {
+    width: 390px;
+    height: 390px;
+
+    right: -160px;
+    top: 130px;
+
+    opacity: 0.48;
+  }
+
+}
