@@ -198,3 +198,146 @@ nav a:hover {
     font-size: 1.12rem;
   }
 }
+
+/* Soft Mind · Code · Nature palette */
+
+:root {
+  --mind: #9b87f5;
+  --code: #76a9e8;
+  --nature: #8fbe8f;
+
+  --text-main: #ecebe7;
+  --text-soft: #b9b7b2;
+  --line-soft: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  color: var(--text-main);
+}
+
+.tagline {
+  letter-spacing: 0.04em;
+}
+
+.tagline::first-letter {
+  color: var(--mind);
+}
+
+/* Thought article accents */
+
+.article-title {
+  position: relative;
+}
+
+.article-title::after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 1px;
+  margin-top: 30px;
+  background: linear-gradient(
+    90deg,
+    var(--mind),
+    var(--code),
+    var(--nature)
+  );
+  opacity: 0.9;
+}
+
+.article-content h2 {
+  color: var(--text-main);
+}
+
+.article-content h2:nth-of-type(1),
+.article-content h2:nth-of-type(2) {
+  color: #a99bf4;
+}
+
+.article-content h2:nth-of-type(3),
+.article-content h2:nth-of-type(4) {
+  color: #89aee8;
+}
+
+.article-content h2:nth-of-type(5) {
+  color: #9bc793;
+}
+
+.article-content .emphasis {
+  color: #b7a8f3;
+}
+
+.article-content .question {
+  position: relative;
+  padding-left: 24px;
+  color: #b7a8f3;
+}
+
+.article-content .question::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  bottom: 0.15em;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    var(--mind),
+    var(--code)
+  );
+  opacity: 0.85;
+}
+
+.article-content .final-question {
+  position: relative;
+  padding-left: 28px;
+  color: #baa9f5;
+}
+
+.article-content .final-question::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.12em;
+  bottom: 0.12em;
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    var(--mind),
+    var(--code),
+    var(--nature)
+  );
+}
+
+.back-link {
+  color: #9a8ee2;
+}
+
+.back-link:hover {
+  color: #c7bfff;
+}
+
+/* Extremely subtle atmospheric glow */
+
+.article-page {
+  position: relative;
+}
+
+.article-page::before {
+  content: "";
+  position: fixed;
+  inset: auto 0 0;
+  height: 260px;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 12% 100%,
+      rgba(120, 87, 210, 0.11),
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 88% 100%,
+      rgba(96, 155, 95, 0.09),
+      transparent 40%
+    );
+  z-index: -1;
+}
