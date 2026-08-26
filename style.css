@@ -1523,3 +1523,403 @@ body {
   }
 
 }
+
+/* =========================================================
+   ARTICLE — MIND / CODE / NATURE
+   ========================================================= */
+
+.article-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  padding:
+    clamp(35px, 5vw, 80px)
+    clamp(28px, 8vw, 140px)
+    120px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 12%,
+      rgba(20, 170, 210, 0.14),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 5% 42%,
+      rgba(90, 70, 220, 0.13),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 90% 72%,
+      rgba(70, 210, 130, 0.08),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #080b13 0%,
+      #0b1020 45%,
+      #071216 100%
+    );
+}
+
+
+/* subtle atmospheric glow */
+
+.article-page::before {
+  content: "";
+  position: fixed;
+
+  width: 700px;
+  height: 700px;
+
+  right: -250px;
+  top: 15%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(40, 150, 255, 0.08),
+      transparent 65%
+    );
+
+  filter: blur(20px);
+
+  pointer-events: none;
+}
+
+
+/* ---------------------------------------------------------
+   BACK
+   --------------------------------------------------------- */
+
+.back-link {
+  position: relative;
+  z-index: 2;
+
+  display: inline-block;
+
+  margin-bottom: clamp(55px, 8vw, 110px);
+
+  color: #78a8ff;
+  text-decoration: none;
+
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.back-link:hover {
+  color: #9effc6;
+  transform: translateX(-4px);
+}
+
+
+/* ---------------------------------------------------------
+   ARTICLE
+   --------------------------------------------------------- */
+
+.article {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 0 auto;
+}
+
+
+/* ---------------------------------------------------------
+   HEADER
+   --------------------------------------------------------- */
+
+.article-header {
+  width: min(1100px, 100%);
+
+  margin-bottom: clamp(70px, 9vw, 130px);
+}
+
+
+.article-date {
+  margin-bottom: 25px;
+
+  color: rgba(255,255,255,0.48);
+
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+}
+
+
+.article-title {
+  max-width: 1100px;
+
+  margin: 0;
+
+  color: #f4f7ff;
+
+  font-size: clamp(3rem, 7vw, 7rem);
+  line-height: 0.96;
+
+  font-weight: 400;
+  letter-spacing: -0.055em;
+}
+
+
+/* colored line beneath title */
+
+.article-header::after {
+  content: "";
+
+  display: block;
+
+  width: 110px;
+  height: 3px;
+
+  margin-top: 40px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #628cff,
+      #55d7ff,
+      #76ef9d
+    );
+
+  box-shadow:
+    0 0 18px rgba(85,215,255,0.3);
+}
+
+
+/* ---------------------------------------------------------
+   READING COLUMN
+   --------------------------------------------------------- */
+
+.article-content {
+  width: min(820px, 100%);
+
+  margin-left: clamp(0px, 6vw, 100px);
+
+  color: rgba(239,244,255,0.86);
+
+  font-size: clamp(1.05rem, 1.3vw, 1.25rem);
+  line-height: 1.85;
+}
+
+
+.article-content p {
+  margin: 0 0 1.8em;
+}
+
+
+/* ---------------------------------------------------------
+   SECTION TITLES
+   --------------------------------------------------------- */
+
+.article-content h2 {
+  position: relative;
+
+  margin:
+    clamp(90px, 10vw, 150px)
+    0
+    45px;
+
+  color: #f5f7ff;
+
+  font-size: clamp(2rem, 3.5vw, 3.7rem);
+  line-height: 1.08;
+
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+
+.article-content h2::before {
+  content: "";
+
+  position: absolute;
+
+  left: -28px;
+  top: 0.15em;
+
+  width: 3px;
+  height: 0.8em;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      #5b8cff,
+      #64e2d1
+    );
+
+  box-shadow:
+    0 0 14px rgba(91,140,255,0.35);
+}
+
+
+/* ---------------------------------------------------------
+   EMPHASIS
+   --------------------------------------------------------- */
+
+.article-content .emphasis {
+  margin:
+    clamp(50px, 6vw, 80px)
+    0;
+
+  color: #b7c8ff;
+
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  line-height: 1.5;
+
+  font-weight: 400;
+}
+
+
+/* ---------------------------------------------------------
+   QUESTIONS
+   --------------------------------------------------------- */
+
+.article-content .question {
+  position: relative;
+
+  margin:
+    clamp(65px, 7vw, 100px)
+    0;
+
+  padding-left: 28px;
+
+  color: #9ee8ff;
+
+  font-size: clamp(1.45rem, 2.3vw, 2.25rem);
+  line-height: 1.45;
+
+  font-weight: 400;
+}
+
+
+.article-content .question::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0.1em;
+
+  width: 2px;
+  height: calc(100% - 0.2em);
+
+  background:
+    linear-gradient(
+      #65a0ff,
+      #65e9b0
+    );
+
+  opacity: 0.7;
+}
+
+
+/* ---------------------------------------------------------
+   FINAL QUESTION
+   --------------------------------------------------------- */
+
+.article-content .final-question {
+  position: relative;
+
+  width: min(1000px, 90vw);
+
+  margin:
+    clamp(110px, 14vw, 200px)
+    0
+    80px;
+
+  color: #f3f8ff;
+
+  font-size: clamp(2.7rem, 5.5vw, 5.8rem);
+  line-height: 1.05;
+
+  font-weight: 400;
+  letter-spacing: -0.045em;
+
+  text-shadow:
+    0 0 35px rgba(80,160,255,0.12);
+}
+
+
+.article-content .final-question::after {
+  content: "";
+
+  display: block;
+
+  width: 150px;
+  height: 3px;
+
+  margin-top: 45px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #628cff,
+      #55d7ff,
+      #7aef9c
+    );
+
+  box-shadow:
+    0 0 25px rgba(85,215,255,0.35);
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+  .article-page {
+    padding:
+      28px
+      22px
+      80px;
+  }
+
+  .back-link {
+    margin-bottom: 60px;
+  }
+
+  .article-title {
+    font-size: clamp(2.8rem, 13vw, 4.5rem);
+  }
+
+  .article-header {
+    margin-bottom: 75px;
+  }
+
+  .article-content {
+    margin-left: 0;
+
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .article-content h2::before {
+    left: -12px;
+  }
+
+  .article-content .question {
+    padding-left: 20px;
+  }
+
+  .article-content .final-question {
+    width: 100%;
+  }
+}
