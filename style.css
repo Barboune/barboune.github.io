@@ -38,6 +38,49 @@ nav a {
   text-decoration: none;
   font-size: 0.95rem;
 }
+.intro {
+  max-width: 580px;
+  margin-top: 28px;
+  color: #c7c7c2;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+#thoughts {
+  margin-top: 120px;
+  padding-top: 40px;
+  border-top: 1px solid #2b2f2c;
+}
+
+.section-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #7f8881;
+  margin-bottom: 24px;
+}
+
+.thought {
+  display: flex;
+  gap: 28px;
+  align-items: baseline;
+  color: #f1eee8;
+  text-decoration: none;
+}
+
+.thought span {
+  color: #7f8881;
+  font-size: 0.85rem;
+}
+
+.thought strong {
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+.thought:hover strong {
+  opacity: 0.6;
+}
 
 nav a:hover {
   opacity: 0.55;
