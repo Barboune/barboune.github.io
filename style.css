@@ -808,3 +808,116 @@ body {
   }
 
 }
+
+/* ========================================
+   HOME — FULL WIDTH OVERRIDE
+======================================== */
+
+.home-page {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 70px clamp(45px, 7vw, 130px) 80px;
+  box-sizing: border-box;
+}
+
+.home-header {
+  width: 100%;
+  min-height: 620px;
+  display: grid;
+  grid-template-columns: minmax(420px, 0.9fr) minmax(420px, 1.1fr);
+  grid-template-rows: auto auto auto auto;
+  column-gap: clamp(50px, 8vw, 150px);
+  align-content: center;
+}
+
+.home-header h1,
+.tagline,
+.intro,
+.home-nav {
+  grid-column: 1;
+}
+
+.home-symbol {
+  grid-column: 2;
+  grid-row: 1 / 5;
+
+  position: relative;
+  top: auto;
+  right: auto;
+
+  align-self: center;
+  justify-self: center;
+
+  width: min(42vw, 600px);
+  height: min(42vw, 600px);
+
+  opacity: 0.48;
+}
+
+.thoughts-section,
+.simple-section,
+.home-footer {
+  width: 100%;
+  max-width: none;
+}
+
+.thoughts-section {
+  margin-top: 20px;
+}
+
+.thought {
+  width: 100%;
+}
+
+/* Projects + About side by side on desktop */
+
+@media (min-width: 900px) {
+  .home-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: clamp(50px, 7vw, 120px);
+  }
+
+  .home-header,
+  .thoughts-section,
+  .home-footer {
+    grid-column: 1 / -1;
+  }
+
+  #projects {
+    grid-column: 1;
+  }
+
+  #about {
+    grid-column: 2;
+  }
+
+  #projects,
+  #about {
+    border-top: 1px solid rgba(255, 255, 255, 0.065);
+  }
+}
+
+/* Mobile stays vertical */
+
+@media (max-width: 899px) {
+  .home-page {
+    padding: 55px 24px 60px;
+  }
+
+  .home-header {
+    display: block;
+    min-height: auto;
+    padding-bottom: 100px;
+  }
+
+  .home-symbol {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    right: -140px;
+    top: 90px;
+    opacity: 0.28;
+  }
+}
