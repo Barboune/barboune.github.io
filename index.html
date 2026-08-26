@@ -1,48 +1,98 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Fernando Ramirez</title>
-  
-<link rel="stylesheet" href="style.css">
-  
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<main>
+  <main class="home-page">
 
-  <h1>Fernando Ramirez</h1>
+    <header class="home-header">
 
-  <p class="tagline">Mind · Code · Nature</p>
+      <div class="home-symbol" aria-hidden="true">
+        <div class="symbol-circle">
+          <span class="symbol-mind">Mind</span>
+          <span class="symbol-code">Code</span>
+          <span class="symbol-nature">Nature</span>
+        </div>
+      </div>
 
-  <p class="intro">
-    Exploring the intersections between cognition, technology and the natural world.
-  </p>
+      <h1>Fernando Ramirez</h1>
 
-  <nav>
-    <a href="#thoughts">Thoughts</a>
-    <a href="#projects">Projects</a>
-    <a href="#about">About</a>
-  </nav>
+      <p class="tagline">
+        <span class="mind-word">Mind</span>
+        <span>·</span>
+        <span class="code-word">Code</span>
+        <span>·</span>
+        <span class="nature-word">Nature</span>
+      </p>
 
-  <section id="thoughts">
-    <p class="section-label">Latest thoughts</p>
+      <p class="intro">
+        Exploring the intersections between cognition, technology and the natural world.
+      </p>
 
-    <a class="thought" href="thoughts/reality-and-perception.html">
-  <span>26.08.2026</span>
-  <strong>What If Reality Is Bigger Than Our Perception?</strong>
-</a>
-    
-  </section>
+      <nav class="home-nav">
+        <a href="#thoughts">Thoughts</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+      </nav>
 
-</main>
+    </header>
+
+    <section id="thoughts" class="thoughts-section">
+
+      <p class="section-label">Latest thoughts</p>
+
+      <a class="thought" href="thoughts/reality-and-perception.html">
+        <span>26.08.2026</span>
+        <strong>What If Reality Is Bigger Than Our Perception?</strong>
+        <span class="thought-arrow">→</span>
+      </a>
+
+    </section>
+
+    <section id="projects" class="simple-section">
+
+      <p class="section-label">Projects</p>
+
+      <p class="section-placeholder">
+        Experiments, notes and things I am building.
+      </p>
+
+    </section>
+
+    <section id="about" class="simple-section">
+
+      <p class="section-label">About</p>
+
+      <p class="section-placeholder">
+        A place to explore questions about mind, technology and nature.
+      </p>
+
+    </section>
+
+    <footer class="home-footer">
+
+      <div class="footer-mark" aria-hidden="true"></div>
+
+      <p class="footer-quote">
+        “The important thing is not to stop questioning.”
+      </p>
+
+      <p class="footer-author">
+        — Albert Einstein
+      </p>
+
+    </footer>
+
+  </main>
 
 </body>
 
