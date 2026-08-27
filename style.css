@@ -2314,3 +2314,170 @@ body {
     margin-left: 0;
   }
 }
+
+/* ========================================
+   CUSDIS — VISUAL INTEGRATION
+======================================== */
+
+.discussion-card {
+  position: relative;
+  overflow: hidden;
+
+  padding: 24px;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(118, 72, 180, 0.08),
+      rgba(45, 110, 170, 0.05),
+      rgba(63, 140, 80, 0.05)
+    );
+
+  border: 1px solid rgba(130, 160, 200, 0.18);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.28),
+    0 0 45px rgba(80, 145, 210, 0.05),
+    inset 0 0 45px rgba(255, 255, 255, 0.012);
+}
+
+/* subtle Mind · Code · Nature border glow */
+
+.discussion-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  padding: 1px;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(181, 126, 255, 0.42),
+      rgba(93, 190, 255, 0.28),
+      rgba(137, 222, 106, 0.32)
+    );
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+/* Cusdis itself */
+
+#cusdis_thread {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+
+  border-radius: 22px;
+
+  overflow: hidden;
+}
+
+/* Cusdis injects an iframe */
+
+#cusdis_thread iframe {
+  display: block;
+
+  width: 100% !important;
+
+  min-height: 420px;
+
+  border: 0 !important;
+  border-radius: 22px;
+
+  background: rgba(7, 11, 16, 0.68);
+
+  box-shadow:
+    inset 0 0 30px rgba(0, 0, 0, 0.18);
+}
+
+/* atmosphere around discussion */
+
+.discussion-section {
+  position: relative;
+}
+
+.discussion-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  left: -180px;
+  top: 160px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(126, 72, 210, 0.09),
+      transparent 68%
+    );
+
+  filter: blur(25px);
+
+  pointer-events: none;
+}
+
+.discussion-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: -170px;
+  bottom: -100px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(92, 190, 110, 0.07),
+      transparent 68%
+    );
+
+  filter: blur(28px);
+
+  pointer-events: none;
+}
+
+/* mobile */
+
+@media (max-width: 700px) {
+
+  .discussion-card {
+    padding: 14px;
+
+    border-radius: 26px;
+  }
+
+  #cusdis_thread {
+    border-radius: 18px;
+  }
+
+  #cusdis_thread iframe {
+    min-height: 450px;
+
+    border-radius: 18px;
+  }
+
+}
