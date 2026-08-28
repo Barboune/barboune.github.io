@@ -953,6 +953,30 @@
       }, 100);
     }
   }
+
+async function shareArticle() {
+  const shareData = {
+    title: "What If Reality Is Bigger Than Our Perception?",
+    text: "What If Reality Is Bigger Than Our Perception? — Fernando Ramirez",
+    url: window.location.href
+  };
+
+  if (navigator.share) {
+    try {
+      await navigator.share(shareData);
+    } catch (error) {
+      // Share cancelled
+    }
+  } else {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      alert("Link copied.");
+    } catch (error) {
+      alert(window.location.href);
+    }
+  }
+}
+  
 </script>
   
 </body>
