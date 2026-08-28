@@ -434,13 +434,30 @@ a {
     min-height: 68px;
   }
 
-  .top-nav {
-    gap: 18px;
-  }
+ .top-nav {
+  gap: 12px;
+  align-items: center;
+}
 
-  .top-nav a {
-    font-size: 0.86rem;
-  }
+.top-nav a {
+  font-size: 0.82rem;
+}
+
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  font-size: 0.82rem;
+}
+
+.language-active {
+  color: var(--green);
+}
+
+.language-divider {
+  opacity: 0.45;
+}
 
   .hero {
     padding: 55px 7px 46px;
