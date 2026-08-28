@@ -1184,3 +1184,14 @@ a {
   }
 
 }
+
+/* COLLAPSIBLE COMMENTS */
+
+.comments-panel {
+  display: none;
+  margin-top: 28px;
+}
+
+.comments-panel.is-open {
+  display: block;
+}
