@@ -867,13 +867,19 @@
       <div class="article-actions">
 
   <button
-    class="action-button"
-    type="button"
-  >
-    <span class="action-icon" aria-hidden="true">
-      ♡
-    </span>
-    <span>Like</span>
+  class="action-button like-button"
+  type="button"
+  id="like-button"
+  aria-pressed="false"
+  onclick="toggleLike()"
+>
+  <span class="action-icon like-icon" aria-hidden="true">
+    ♡
+  </span>
+
+  <span>Like</span>
+
+  <span class="like-count" id="like-count"></span>
   </button>
 
   <button
@@ -976,7 +982,37 @@ async function shareArticle() {
     }
   }
 }
-  
+  function toggleLike() {
+  const button = document.getElementById("like-button");
+  const icon = button.querySelector(".like-icon");
+
+  const isLiked = button.getAttribute("aria-pressed") === "true";
+  const newState = !isLiked;
+
+  button.setAttribute("aria-pressed", newState);
+  icon.textContent = newState ? "♥" : "♡";
+
+  button.classList.toggle("is-liked", newState);
+
+  localStorage.setItem(
+    "reality-and-perception-liked",
+    newState ? "true" : "false"
+  );
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.getElementById("like-button");
+  const icon = button.querySelector(".like-icon");
+
+  const savedLike =
+    localStorage.getItem("reality-and-perception-liked") === "true";
+
+  if (savedLike) {
+    button.setAttribute("aria-pressed", "true");
+    icon.textContent = "♥";
+    button.classList.add("is-liked");
+  }
+});
 </script>
   
 </body>
