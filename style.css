@@ -969,3 +969,33 @@ a {
   }
 
 }
+
+/* =========================================
+   ARTICLE ACTIONS — COMMENTS PANEL
+   ========================================= */
+
+.comments-panel {
+  display: none;
+  margin-top: 22px;
+}
+
+.comments-panel.is-open {
+  display: block;
+}
+
+/* pequeña animación al abrir */
+.comments-panel.is-open {
+  animation: commentsReveal 0.28s ease;
+}
+
+@keyframes commentsReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
