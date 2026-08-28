@@ -1074,6 +1074,40 @@ a {
   }
 
 }
+
+    /* Force clean article action buttons */
+
+.article-actions button,
+.article-action {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+
+  background: none !important;
+  background-color: transparent !important;
+
+  border: none !important;
+  border-radius: 0 !important;
+
+  box-shadow: none !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  color: rgba(235, 238, 232, 0.55) !important;
+
+  font-family: Arial, sans-serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
+
+  cursor: pointer;
+}
+
+.article-actions button:hover,
+.article-action:hover {
+  color: #86d66f !important;
+  background: transparent !important;
+}
     opacity: 1;
     transform: translateY(0);
   }
