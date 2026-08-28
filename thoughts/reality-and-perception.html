@@ -14,17 +14,318 @@
 
   <main class="article-page">
 
-    <a class="back-link" href="../index.html">← Back</a>
+    <!-- TOP NAVIGATION -->
 
-    <article class="article">
+    <header class="article-topbar">
 
-      <header class="article-header">
-        <p class="article-date">26.08.2026</p>
+      <a href="../index.html" class="brand">FR ·</a>
+
+      <nav class="top-nav">
+        <a href="../index.html#thoughts">Thoughts</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#about">About</a>
+      </nav>
+
+    </header>
+
+
+    <!-- BACK -->
+
+    <div class="article-back-wrap">
+
+      <a class="back-link" href="../index.html#thoughts">
+        ← Back to thoughts
+      </a>
+
+    </div>
+
+
+    <!-- ARTICLE HERO -->
+
+    <header class="article-hero">
+
+      <div class="article-hero-copy">
+
+        <p class="article-date">
+          AUG 26, 2026
+        </p>
 
         <h1 class="article-title">
           What If Reality Is Bigger Than Our Perception?
         </h1>
-      </header>
+
+        <div class="article-meta">
+          <span>◷</span>
+          <span>6 MIN READ</span>
+          <span>·</span>
+          <span class="article-type">ESSAY</span>
+        </div>
+
+      </div>
+
+
+      <!-- IDENTITY SYMBOL -->
+
+      <div class="article-symbol" aria-hidden="true">
+
+        <svg
+          class="identity-symbol"
+          viewBox="0 0 600 600"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+
+          <defs>
+
+            <linearGradient
+              id="articleIdentityGradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
+              <stop offset="0%" stop-color="#a56cff"/>
+              <stop offset="48%" stop-color="#59b7ff"/>
+              <stop offset="100%" stop-color="#7fd35b"/>
+            </linearGradient>
+
+            <radialGradient id="articleIdentityGlow">
+              <stop
+                offset="0%"
+                stop-color="#75b7ff"
+                stop-opacity="0.18"
+              />
+
+              <stop
+                offset="60%"
+                stop-color="#7358c7"
+                stop-opacity="0.05"
+              />
+
+              <stop
+                offset="100%"
+                stop-color="#000000"
+                stop-opacity="0"
+              />
+            </radialGradient>
+
+            <filter id="articleSoftGlow">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+
+          </defs>
+
+
+          <!-- atmospheric glow -->
+
+          <circle
+            cx="300"
+            cy="300"
+            r="275"
+            fill="url(#articleIdentityGlow)"
+          />
+
+
+          <!-- orbital system -->
+
+          <circle
+            cx="300"
+            cy="300"
+            r="245"
+            fill="none"
+            stroke="url(#articleIdentityGradient)"
+            stroke-opacity="0.28"
+            stroke-width="1"
+          />
+
+          <circle
+            cx="300"
+            cy="300"
+            r="205"
+            fill="none"
+            stroke="url(#articleIdentityGradient)"
+            stroke-opacity="0.18"
+            stroke-width="1"
+          />
+
+          <circle
+            cx="300"
+            cy="300"
+            r="160"
+            fill="none"
+            stroke="url(#articleIdentityGradient)"
+            stroke-opacity="0.12"
+            stroke-width="1"
+          />
+
+
+          <!-- neural hemisphere -->
+
+          <g
+            fill="none"
+            stroke="#9b78ff"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-opacity="0.75"
+            filter="url(#articleSoftGlow)"
+          >
+
+            <path
+              d="M292 172
+                 C245 150 201 177 191 215
+                 C156 221 147 263 170 285
+                 C146 320 169 363 205 365
+                 C208 404 248 426 290 408"
+            />
+
+            <path d="M280 190 C240 186 225 210 229 242"/>
+            <path d="M248 217 C205 225 197 261 216 286"/>
+            <path d="M211 279 C190 307 211 337 243 340"/>
+            <path d="M249 335 C233 371 258 393 289 386"/>
+
+            <path d="M270 202 C290 220 287 244 268 255"/>
+            <path d="M232 248 C253 252 267 267 260 289"/>
+            <path d="M218 301 C245 293 271 308 275 330"/>
+            <path d="M263 354 C282 348 291 360 293 381"/>
+
+            <circle cx="244" cy="205" r="4"/>
+            <circle cx="210" cy="250" r="4"/>
+            <circle cx="246" cy="287" r="4"/>
+            <circle cx="215" cy="324" r="4"/>
+            <circle cx="263" cy="357" r="4"/>
+
+          </g>
+
+
+          <!-- trunk -->
+
+          <path
+            d="M300 410
+               C294 355 300 316 300 272
+               C302 235 310 205 318 178"
+            fill="none"
+            stroke="url(#articleIdentityGradient)"
+            stroke-width="5"
+            stroke-linecap="round"
+            opacity="0.8"
+          />
+
+
+          <!-- branches -->
+
+          <g
+            fill="none"
+            stroke="#79cf72"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-opacity="0.75"
+          >
+
+            <path d="M306 270 C340 245 362 221 371 190"/>
+            <path d="M309 248 C344 236 387 231 411 201"/>
+            <path d="M311 228 C348 206 373 188 383 165"/>
+            <path d="M315 293 C357 278 399 270 430 242"/>
+            <path d="M314 320 C357 314 397 326 430 311"/>
+            <path d="M310 347 C348 357 375 376 398 404"/>
+
+          </g>
+
+
+          <!-- leaves -->
+
+          <g fill="#83d86d" opacity="0.72">
+
+            <circle cx="371" cy="188" r="4"/>
+            <circle cx="411" cy="201" r="4"/>
+            <circle cx="383" cy="165" r="4"/>
+            <circle cx="430" cy="242" r="4"/>
+            <circle cx="430" cy="311" r="4"/>
+            <circle cx="398" cy="404" r="4"/>
+
+            <circle cx="348" cy="213" r="3"/>
+            <circle cx="391" cy="220" r="3"/>
+            <circle cx="404" cy="276" r="3"/>
+            <circle cx="381" cy="323" r="3"/>
+            <circle cx="359" cy="348" r="3"/>
+
+          </g>
+
+
+          <!-- roots -->
+
+          <g
+            fill="none"
+            stroke="#7fbd75"
+            stroke-width="2"
+            stroke-opacity="0.62"
+            stroke-linecap="round"
+          >
+
+            <path d="M300 406 C277 430 248 448 215 464"/>
+            <path d="M301 407 C288 444 282 470 279 497"/>
+            <path d="M302 407 C326 438 350 463 388 479"/>
+            <path d="M302 406 C337 421 374 430 418 427"/>
+
+          </g>
+
+
+          <!-- nodes -->
+
+          <g filter="url(#articleSoftGlow)">
+
+            <circle cx="142" cy="248" r="4" fill="#9c72ff"/>
+            <circle cx="473" cy="224" r="4" fill="#59b7ff"/>
+            <circle cx="300" cy="545" r="4" fill="#83d86d"/>
+
+          </g>
+
+
+          <!-- labels -->
+
+          <text
+            x="120"
+            y="235"
+            fill="#aa83ff"
+            font-size="14"
+            letter-spacing="3"
+          >
+            MIND
+          </text>
+
+          <text
+            x="468"
+            y="212"
+            fill="#64baff"
+            font-size="14"
+            letter-spacing="3"
+          >
+            CODE
+          </text>
+
+          <text
+            x="263"
+            y="570"
+            fill="#8ed76f"
+            font-size="14"
+            letter-spacing="3"
+          >
+            NATURE
+          </text>
+
+        </svg>
+
+      </div>
+
+    </header>
+
+
+    <!-- ARTICLE -->
+
+    <article class="article">
 
       <div class="article-content">
 
@@ -88,6 +389,7 @@
           if our perception has limits, why should we assume those limits belong
           to reality as well?
         </p>
+
 
         <h2>The Observer</h2>
 
@@ -166,6 +468,7 @@
           We also experience the fact that we are perceiving.
         </p>
 
+
         <h2>The Experience</h2>
 
         <p>
@@ -239,6 +542,7 @@
         <p class="question">
           what would happen if the observer were radically different from us?
         </p>
+
 
         <h2>An Intelligence Without Our Biology</h2>
 
@@ -340,6 +644,7 @@
           Why would it have to?
         </p>
 
+
         <h2>Extending the Observer</h2>
 
         <p>
@@ -413,6 +718,7 @@
         <p>
           But the question brings me, strangely enough, back to where all of this began.
         </p>
+
 
         <h2>Back to the Tree</h2>
 
@@ -553,38 +859,59 @@
 
       </div>
 
+
+      <!-- DISCUSSION -->
+
       <section class="discussion-section">
 
-  <div class="discussion-heading">
-    <p class="discussion-kicker">Continue the thought</p>
+        <div class="discussion-heading">
 
-    <h2>The essay ends here. The conversation doesn’t have to.</h2>
+          <p class="discussion-kicker">
+            CONTINUE THE THOUGHT
+          </p>
 
-    <p class="discussion-invite">
-      Agree, disagree, question it, or take the idea somewhere else.
-    </p>
-  </div>
+          <h2>
+            The essay ends here.
+            <em>The conversation doesn’t have to.</em>
+          </h2>
 
-  <div class="discussion-card">
+          <p class="discussion-invite">
+            Agree, disagree, question it, or take the idea somewhere else.
+          </p>
 
-    <div id="cusdis_thread"
-  data-host="https://cusdis.com"
-  data-app-id="bd2ead11-bbf2-469b-85b8-ff7d555f7b72"
-  data-page-id="reality-and-perception"
-  data-page-url="https://barboune.github.io/thoughts/reality-and-perception.html"
-  data-page-title="What If Reality Is Bigger Than Our Perception?"
-      data-theme="dark"
-></div>
+        </div>
 
-<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 
-  </div>
+        <div class="discussion-card">
 
- 
+          <div
+            id="cusdis_thread"
+            data-host="https://cusdis.com"
+            data-app-id="bd2ead11-bbf2-469b-85b8-ff7d555f7b72"
+            data-page-id="reality-and-perception"
+            data-page-url="https://barboune.github.io/thoughts/reality-and-perception.html"
+            data-page-title="What If Reality Is Bigger Than Our Perception?"
+            data-theme="dark"
+          ></div>
 
-</section>
+          <script
+            async
+            defer
+            src="https://cusdis.com/js/cusdis.es.js"
+          ></script>
+
+        </div>
+
+      </section>
 
     </article>
+
+
+    <!-- FOOTER -->
+
+    <footer class="article-footer">
+      <p>© 2026 Fernando Ramirez</p>
+    </footer>
 
   </main>
 
