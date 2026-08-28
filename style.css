@@ -1184,7 +1184,20 @@ a {
   }
 
 }
+/* LIKE ACTIVE STATE */
 
+.like-button.is-liked {
+  color: #86d66f !important;
+}
+
+.like-button.is-liked .like-icon {
+  color: #86d66f !important;
+}
+
+.like-count {
+  color: inherit;
+  font-size: 0.72rem;
+}
 /* COLLAPSIBLE COMMENTS */
 
 .comments-panel {
