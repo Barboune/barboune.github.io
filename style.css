@@ -526,3 +526,377 @@ a {
   }
 
 }
+
+/* =========================================================
+   ARTICLE PAGE
+========================================================= */
+
+.article-page {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* -------------------------
+   ARTICLE TOP BAR
+-------------------------- */
+
+.article-topbar {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+/* -------------------------
+   BACK LINK
+-------------------------- */
+
+.article-back-wrap {
+  padding-top: 34px;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--green);
+  font-family: var(--serif);
+  font-size: 1rem;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.back-link:hover {
+  opacity: 0.8;
+  transform: translateX(-3px);
+}
+
+/* -------------------------
+   ARTICLE HERO
+-------------------------- */
+
+.article-hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 48px;
+
+  max-width: 920px;
+  margin: 0 auto;
+
+  padding: 54px 0 42px;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.article-hero-copy {
+  min-width: 0;
+}
+
+.article-date {
+  margin: 0 0 16px;
+  color: var(--green);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.article-title {
+  max-width: 590px;
+  margin: 0;
+
+  color: var(--text);
+  font-family: var(--serif);
+
+  font-size: clamp(2.8rem, 5vw, 4.3rem);
+  font-weight: 400;
+
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-top: 25px;
+
+  color: #909690;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+}
+
+.article-type {
+  color: var(--green);
+}
+
+.article-symbol {
+  width: 100%;
+  max-width: 400px;
+  justify-self: end;
+}
+
+/* -------------------------
+   ARTICLE BODY
+-------------------------- */
+
+.article {
+  width: 100%;
+}
+
+.article-content {
+  width: min(100%, 720px);
+  margin: 0 auto;
+
+  padding: 42px 0 8px;
+
+  color: #dedfd9;
+  font-family: var(--serif);
+
+  font-size: 1.08rem;
+  line-height: 1.56;
+  letter-spacing: 0.008em;
+}
+
+.article-content p {
+  margin: 0 0 1.18em;
+}
+
+.article-content em {
+  color: #f0f1eb;
+}
+
+/* -------------------------
+   ARTICLE SECTION TITLES
+-------------------------- */
+
+.article-content h2 {
+  margin: 2.7em 0 0.75em;
+
+  color: var(--text);
+  font-family: var(--serif);
+
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 400;
+
+  line-height: 1.12;
+  letter-spacing: -0.018em;
+}
+
+/* -------------------------
+   EMPHASIS / QUESTIONS
+-------------------------- */
+
+.article-content .emphasis {
+  color: #f0f2ec;
+  font-style: italic;
+}
+
+.article-content .question {
+  margin: 1.45em 0;
+  color: #f2f4ef;
+  font-style: italic;
+}
+
+.article-content .final-question {
+  margin: 1.6em 0 0;
+
+  color: var(--green);
+  font-family: var(--serif);
+
+  font-size: 1.4rem;
+  font-style: italic;
+
+  line-height: 1.4;
+}
+
+/* -------------------------
+   DISCUSSION
+-------------------------- */
+
+.discussion-section {
+  width: min(100%, 720px);
+
+  margin: 42px auto 0;
+  padding-top: 30px;
+
+  border-top: 1px solid var(--line);
+}
+
+.discussion-heading {
+  margin-bottom: 28px;
+}
+
+.discussion-kicker {
+  margin: 0 0 10px;
+
+  color: var(--green);
+  font-family: var(--sans);
+
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.discussion-heading h2 {
+  margin: 0;
+
+  color: var(--text);
+  font-family: var(--serif);
+
+  font-size: clamp(1.8rem, 4vw, 2.45rem);
+  font-weight: 400;
+
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.discussion-heading h2 em {
+  color: var(--green);
+  font-weight: 400;
+}
+
+.discussion-invite {
+  margin: 12px 0 0;
+
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 1rem;
+}
+
+/* -------------------------
+   CUSDIS CARD
+-------------------------- */
+
+.discussion-card {
+  overflow: hidden;
+
+  padding: 18px 18px 4px;
+
+  border: 1px solid var(--line);
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.018),
+      rgba(255, 255, 255, 0.004)
+    );
+}
+
+#cusdis_thread {
+  width: 100%;
+}
+
+/* -------------------------
+   ARTICLE FOOTER
+-------------------------- */
+
+.article-footer {
+  margin-top: 54px;
+  padding: 24px 0 38px;
+
+  border-top: 1px solid var(--line);
+
+  text-align: center;
+}
+
+.article-footer p {
+  margin: 0;
+
+  color: #727872;
+  font-family: var(--serif);
+  font-size: 0.82rem;
+}
+
+/* =========================================================
+   ARTICLE MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .article-page {
+    width: min(100% - 28px, 1120px);
+  }
+
+  .article-topbar {
+    min-height: 68px;
+  }
+
+  .article-back-wrap {
+    padding-top: 25px;
+  }
+
+  .article-hero {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    padding: 38px 4px 30px;
+  }
+
+  .article-title {
+    max-width: 100%;
+    font-size: clamp(2.45rem, 12vw, 3.6rem);
+  }
+
+  .article-symbol {
+    width: min(90%, 330px);
+
+    margin: 4px auto 0;
+
+    justify-self: center;
+  }
+
+  .article-content {
+    width: 100%;
+
+    padding: 34px 5px 0;
+
+    font-size: 1.04rem;
+    line-height: 1.55;
+    letter-spacing: 0.005em;
+  }
+
+  .article-content h2 {
+    margin-top: 2.35em;
+    font-size: 1.9rem;
+  }
+
+  .discussion-section {
+    width: 100%;
+    margin-top: 36px;
+  }
+
+  .discussion-card {
+    padding: 12px 10px 2px;
+  }
+
+  .article-footer {
+    margin-top: 44px;
+  }
+}
+
+@media (max-width: 470px) {
+
+  .article-title {
+    font-size: 2.55rem;
+  }
+
+  .article-content {
+    font-size: 1.01rem;
+    line-height: 1.52;
+  }
+
+  .article-symbol {
+    width: 280px;
+  }
+
+  .discussion-heading h2 {
+    font-size: 1.85rem;
+  }
+}
