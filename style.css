@@ -1208,3 +1208,18 @@ a {
 .comments-panel.is-open {
   display: block;
 }
+
+/* ARTICLE IMAGE */
+
+.article-figure {
+  margin: 0 0 48px;
+  padding: 0;
+}
+
+.article-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  opacity: 0.92;
+}
