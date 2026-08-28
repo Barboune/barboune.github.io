@@ -1240,3 +1240,35 @@ a {
   border-radius: 4px;
   opacity: 0.92;
 }
+
+/* BACK TO TOP */
+
+.back-to-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 46px;
+  height: 46px;
+  margin: 48px auto 20px;
+
+  border: 1px solid rgba(126, 211, 105, 0.35);
+  border-radius: 50%;
+
+  color: var(--green);
+  background: rgba(126, 211, 105, 0.05);
+
+  font-size: 1.35rem;
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-4px);
+  background: rgba(126, 211, 105, 0.10);
+  box-shadow: 0 0 18px rgba(126, 211, 105, 0.16);
+}
