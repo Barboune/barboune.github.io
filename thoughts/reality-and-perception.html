@@ -864,20 +864,47 @@
 
       <section class="discussion-section">
 
-        <div class="discussion-heading discussion-heading-subtle">
+      <div class="article-actions">
 
-  <p class="discussion-kicker">
-    JOIN THE CONVERSATION
-  </p>
+  <button
+    class="action-button comments-toggle"
+    type="button"
+    aria-expanded="false"
+    aria-controls="comments-panel"
+  >
+    <span class="action-icon" aria-hidden="true">
+      ♡
+    </span>
+    <span>Like</span>
+  </button>
 
-  <p class="discussion-invite">
-    Leave a thought, question, or perspective.
-  </p>
+  <button
+    class="action-button comments-toggle"
+    type="button"
+    aria-expanded="false"
+    aria-controls="comments-panel"
+    onclick="toggleComments()"
+  >
+    <span class="action-icon" aria-hidden="true">
+      ◯
+    </span>
+    <span>Comments</span>
+  </button>
+
+  <button
+    class="action-button"
+    type="button"
+    onclick="shareArticle()"
+  >
+    <span class="action-icon" aria-hidden="true">
+      ↗
+    </span>
+    <span>Share</span>
+  </button>
 
 </div>
 
-
-        <div class="discussion-card">
+        <div class="discussion-card comments-panel" id="comments-panel">
 
           <div
             id="cusdis_thread"
