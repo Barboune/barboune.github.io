@@ -937,6 +937,26 @@
 
   </main>
 
+<script>
+  function toggleComments() {
+    const panel = document.getElementById("comments-panel");
+    const button = document.querySelector(".comments-toggle");
+
+    const isOpen = panel.classList.toggle("is-open");
+
+    button.setAttribute("aria-expanded", isOpen);
+
+    if (isOpen) {
+      setTimeout(() => {
+        panel.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }, 100);
+    }
+  }
+</script>
+  
 </body>
 
 </html>
