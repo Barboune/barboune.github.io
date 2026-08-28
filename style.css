@@ -900,3 +900,72 @@ a {
     font-size: 1.85rem;
   }
 }
+
+/* =========================================================
+   SUBTLE DISCUSSION
+========================================================= */
+
+.discussion-section {
+  margin-top: 68px;
+  padding-top: 22px;
+}
+
+.discussion-heading-subtle {
+  margin-bottom: 18px;
+}
+
+.discussion-heading-subtle .discussion-kicker {
+  margin-bottom: 6px;
+
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+
+  color: #7f9679;
+}
+
+.discussion-heading-subtle .discussion-invite {
+  margin: 0;
+
+  color: #777d77;
+
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.discussion-card {
+  padding: 10px 12px 0;
+
+  border-color: rgba(255, 255, 255, 0.055);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.008);
+
+  opacity: 0.82;
+}
+
+/* Make the comment area feel secondary */
+#cusdis_thread {
+  opacity: 0.88;
+}
+
+@media (max-width: 760px) {
+
+  .discussion-section {
+    margin-top: 58px;
+    padding-top: 18px;
+  }
+
+  .discussion-heading-subtle {
+    margin-bottom: 14px;
+  }
+
+  .discussion-heading-subtle .discussion-invite {
+    font-size: 0.78rem;
+  }
+
+  .discussion-card {
+    padding: 8px 8px 0;
+  }
+
+}
